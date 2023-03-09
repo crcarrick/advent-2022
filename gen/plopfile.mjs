@@ -22,7 +22,7 @@ export default function (
       },
     ],
     actions: (data) => {
-      const dir = `day_${data.day}${data.part}`;
+      const dir = path.join("..", `day_${data.day}${data.part}`);
 
       return [
         {
