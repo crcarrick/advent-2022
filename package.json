@@ -2,7 +2,7 @@
   "name": "advent-2022",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "generate:solution": "plop --plopfile=gen/plopfile.mjs"
+    "generate": "plop --plopfile=gen/plopfile.mjs"
   },
   "devDependencies": {
     "plop": "^3.1.2"
