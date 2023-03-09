@@ -53,38 +53,38 @@ fn main() {
 fn _solution_from_github() {
     // overall a similar solution but they used some rust features i wasn't aware of
     //
-    //  impl FromStr on Action {
-    //    type Err = String
+    // impl FromStr on Action {
+    //     type Err = String
     //
-    //    from_str(s: &str) -> Result<Self, Self::Err> {
-    //        match s {
-    //          "A" | "X" => Ok(Action::Rock),
-    //            "B" | "Y" => Ok(Action::Paper),
-    //            "C" | "Z" => Ok(Action::Scissor),
-    //            _ => Err("Not a known action".to_string()),
-    //        }
-    //      }
-    //  }
+    //     from_str(s: &str) -> Result<Self, Self::Err> {
+    //         match s {
+    //             "A" | "X" => Ok(Action::Rock),
+    //             "B" | "Y" => Ok(Action::Paper),
+    //             "C" | "Z" => Ok(Action::Scissor),
+    //             _ => Err("Not a known action".to_string()),
+    //         }
+    //     }
+    // }
     //
-    //  "A"::parse<Action>().unwrap()
+    // "A"::parse<Action>().unwrap()
     //
-    //  impl PartialOrd on Action {
-    //      fn partial_cmp(&self, other: &Self) -> Option<std::comp::Ordering> {
-    //          if self == &Action::Scissor && other == &Action::Rock {
-    //              return Some(Ordering::Less)
-    //          } else if self == &Action::Rock && other == &Action::Scissor {
-    //              return Some(Ordering::Greater)
-    //          } else {
-    //              return Some((*self as u8).cmp(&(*other as u8)))
-    //          }
-    //      }
-    //  }
+    // impl PartialOrd on Action {
+    //     fn partial_cmp(&self, other: &Self) -> Option<std::comp::Ordering> {
+    //         if self == &Action::Scissor && other == &Action::Rock {
+    //             return Some(Ordering::Less)
+    //         } else if self == &Action::Rock && other == &Action::Scissor {
+    //             return Some(Ordering::Greater)
+    //         } else {
+    //             return Some((*self as u8).cmp(&(*other as u8)))
+    //         }
+    //     }
+    // }
     //
-    //  match round[0].partial_cmp(round[1]) {
-    //      Some(Ordering::Equal) => 3 + round[1] as u32,
-    //      Some(Ordering::Less) => 6 + round[1] as u32,
-    //      Some(Ordering::Greater) => 0 + round[1] as u32,
-    //      None => panic!("Actions should be comparable")
-    //  }
+    // match round[0].partial_cmp(round[1]) {
+    //     Some(Ordering::Equal) => 3 + round[1] as u32,
+    //     Some(Ordering::Less) => 6 + round[1] as u32,
+    //     Some(Ordering::Greater) => 0 + round[1] as u32,
+    //     None => panic!("Actions should be comparable")
+    // }
     //
 }
