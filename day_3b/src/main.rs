@@ -12,7 +12,7 @@ fn solution(input: &str) -> usize {
             let common_item = a
                 .chars()
                 .find(|i| b.contains(*i) && c.contains(*i))
-                .unwrap();
+                .unwrap_or_else(|| panic!("Could not find common item"));
 
             get_alphabet()
                 .position(|letter| letter == common_item)
@@ -30,6 +30,7 @@ fn main() {
 //
 // biscardi doesn't have a github solution for this one :(
 // but i feel good about this one 🤷‍♂️
+// i could still use byte math here but idk, it's ugly
 
 #[cfg(test)]
 mod tests {

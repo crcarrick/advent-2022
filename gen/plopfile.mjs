@@ -18,7 +18,8 @@ export default function (
         name: "part",
         message: "Part?",
         default: "a",
-        choices: ["a", "b"],
+        choices: ["a", "b", "c"],
+        validate: (input) => ["a", "b", "c"].includes(input),
       },
     ],
     actions: (data) => {
