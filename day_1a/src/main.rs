@@ -24,7 +24,7 @@ fn main() {
     println!("{}", most)
 }
 
-fn _better() {
+fn _solution_from_github() {
     let input = get_input();
     let elves = input.split("\n\n");
     let most = elves
