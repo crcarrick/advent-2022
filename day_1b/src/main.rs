@@ -1,9 +1,4 @@
-fn get_input() -> &'static str {
-    return include_str!("../input.txt");
-}
-
-fn main() {
-    let input = get_input();
+fn solution(input: &str) -> u32 {
     let mut elves = input
         .split("\n\n")
         .map(|elf| elf.lines().map(|line| line.parse::<u32>().unwrap()).sum())
@@ -12,18 +7,40 @@ fn main() {
     elves.sort();
     elves.reverse();
 
-    println!("{}", elves.iter().take(3).sum::<u32>());
+    return elves.iter().take(3).sum::<u32>();
 }
 
-// this is basically what i had
-fn _solution_from_github() {
-    let input = get_input();
-    let mut elves = input
-        .split("\n\n")
-        .map(|elf| elf.lines().map(|line| line.parse::<u32>().unwrap()).sum())
-        .collect::<Vec<_>>();
+fn main() {
+    println!("{}", solution(include_str!("../input.txt")))
+}
 
-    elves.sort();
+// github solution
+//
+// almost exactly the same just did rev() on the elves.iter() instead of the vec
 
-    println!("{}", elves.iter().rev().take(3).sum::<u32>());
+#[cfg(test)]
+mod test {
+    use super::solution;
+
+    const INPUT: &str = "1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000";
+
+    #[test]
+    fn test_solution() {
+        let result = solution(INPUT);
+
+        assert_eq!(result, 45000)
+    }
 }

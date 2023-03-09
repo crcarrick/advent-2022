@@ -1,7 +1,3 @@
-fn get_input() -> &'static str {
-    return include_str!("../input.txt");
-}
-
 #[derive(Copy, Clone)]
 enum Action {
     Rock = 1,
@@ -20,8 +16,7 @@ impl Action {
     }
 }
 
-fn main() {
-    let input = get_input();
+fn solution(input: &str) -> u32 {
     let score = input
         .lines()
         .map(|r| {
@@ -47,44 +42,65 @@ fn main() {
         })
         .sum::<u32>();
 
-    println!("{}", score)
+    return score;
 }
 
-fn _solution_from_github() {
-    // overall a similar solution but they used some rust features i wasn't aware of
-    //
-    // impl FromStr on Action {
-    //     type Err = String
-    //
-    //     from_str(s: &str) -> Result<Self, Self::Err> {
-    //         match s {
-    //             "A" | "X" => Ok(Action::Rock),
-    //             "B" | "Y" => Ok(Action::Paper),
-    //             "C" | "Z" => Ok(Action::Scissor),
-    //             _ => Err("Not a known action".to_string()),
-    //         }
-    //     }
-    // }
-    //
-    // "A"::parse<Action>().unwrap()
-    //
-    // impl PartialOrd on Action {
-    //     fn partial_cmp(&self, other: &Self) -> Option<std::comp::Ordering> {
-    //         if self == &Action::Scissor && other == &Action::Rock {
-    //             return Some(Ordering::Less)
-    //         } else if self == &Action::Rock && other == &Action::Scissor {
-    //             return Some(Ordering::Greater)
-    //         } else {
-    //             return Some((*self as u8).cmp(&(*other as u8)))
-    //         }
-    //     }
-    // }
-    //
-    // match round[0].partial_cmp(round[1]) {
-    //     Some(Ordering::Equal) => 3 + round[1] as u32,
-    //     Some(Ordering::Less) => 6 + round[1] as u32,
-    //     Some(Ordering::Greater) => 0 + round[1] as u32,
-    //     None => panic!("Actions should be comparable")
-    // }
-    //
+fn main() {
+    println!("{}", solution(include_str!("../input.txt")))
+}
+
+// github solution
+//
+// overall a similar solution but they used some rust features i wasn't aware of
+//
+// impl FromStr on Action {
+//     type Err = String
+//
+//     from_str(s: &str) -> Result<Self, Self::Err> {
+//         match s {
+//             "A" | "X" => Ok(Action::Rock),
+//             "B" | "Y" => Ok(Action::Paper),
+//             "C" | "Z" => Ok(Action::Scissor),
+//             _ => Err("Not a known action".to_string()),
+//         }
+//     }
+// }
+//
+// "A"::parse<Action>().unwrap()
+//
+// impl PartialOrd on Action {
+//     fn partial_cmp(&self, other: &Self) -> Option<std::comp::Ordering> {
+//         if self == &Action::Scissor && other == &Action::Rock {
+//             return Some(Ordering::Less)
+//         } else if self == &Action::Rock && other == &Action::Scissor {
+//             return Some(Ordering::Greater)
+//         } else {
+//             return Some((*self as u8).cmp(&(*other as u8)))
+//         }
+//     }
+// }
+//
+// match round[0].partial_cmp(round[1]) {
+//     Some(Ordering::Equal) => 3 + round[1] as u32,
+//     Some(Ordering::Less) => 6 + round[1] as u32,
+//     Some(Ordering::Greater) => 0 + round[1] as u32,
+//     None => panic!("Actions should be comparable")
+// }
+//
+
+#[cfg(test)]
+mod test {
+    use super::solution;
+
+    const INPUT: &str = "A Y
+B X
+C Z
+";
+
+    #[test]
+    fn test_solution() {
+        let result = solution(INPUT);
+
+        assert_eq!(result, 15)
+    }
 }
