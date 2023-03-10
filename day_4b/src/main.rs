@@ -1,13 +1,27 @@
+trait TupleMap<T, U> {
+    fn map<F>(&self, f: F) -> (U, U, U, U)
+    where
+        F: Fn(&T) -> U;
+}
+
+impl<T, U> TupleMap<T, U> for (T, T, T, T) {
+    fn map<F>(&self, f: F) -> (U, U, U, U)
+    where
+        F: Fn(&T) -> U,
+    {
+        let (a, b, c, d) = &self;
+
+        return (f(a), f(b), f(c), f(d));
+    }
+}
+
 fn solution(input: &str) -> usize {
     input
         .lines()
         .filter(|l| {
             let (l, r) = l.split_once(",").unwrap();
             let ((a, b), (c, d)) = (l.split_once("-").unwrap(), r.split_once("-").unwrap());
-            let ((a, b), (c, d)) = (
-                (a.parse::<u8>().unwrap(), b.parse::<u8>().unwrap()),
-                (c.parse::<u8>().unwrap(), d.parse::<u8>().unwrap()),
-            );
+            let (a, b, c, d) = (a, b, c, d).map(|i| i.parse::<u8>().unwrap());
 
             return a <= d && c <= b;
         })
@@ -20,7 +34,9 @@ fn main() {
 
 // github solution
 //
-// idk i couldn't find one but i didn't look that hard and i imagine it's close
+// idk i couldn't find one but i didn't look that hard and i imagine it's close to
+// the original implementation, which didn't include this wacky TupleMap trait i
+// decided to mess around and create.  i just parsed them all into u8 manually in original
 
 #[cfg(test)]
 mod tests {
