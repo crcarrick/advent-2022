@@ -1,8 +1,17 @@
-fn solution(input: &str) -> u32 {
+fn solution(input: &str) -> usize {
     input
         .lines()
-        .map(|l| l.split_once(",").unwrap())
-        .map(|(l, r)| (l.split_once("-").unwrap(), r.split_once("-").unwrap()))
+        .filter(|l| {
+            let (l, r) = l.split_once(",").unwrap();
+            let ((a, b), (c, d)) = (l.split_once("-").unwrap(), r.split_once("-").unwrap());
+            let ((a, b), (c, d)) = (
+                (a.parse::<u8>().unwrap(), b.parse::<u8>().unwrap()),
+                (c.parse::<u8>().unwrap(), d.parse::<u8>().unwrap()),
+            );
+
+            return a <= d && c <= b;
+        })
+        .count()
 }
 
 fn main() {
@@ -11,7 +20,7 @@ fn main() {
 
 // github solution
 //
-//
+// idk i couldn't find one but i didn't look that hard and i imagine it's close
 
 #[cfg(test)]
 mod tests {
@@ -28,6 +37,6 @@ mod tests {
     fn test_solution() {
         let result = solution(INPUT);
 
-        assert_eq!(result, 7)
+        assert_eq!(result, 4)
     }
 }
