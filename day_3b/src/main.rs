@@ -26,11 +26,9 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// biscardi doesn't have a github solution for this one :(
-// but i feel good about this one 🤷‍♂️
-// i could still use byte math here but idk, it's ugly
+//
 
 #[cfg(test)]
 mod tests {

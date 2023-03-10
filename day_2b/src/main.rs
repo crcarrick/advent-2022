@@ -60,10 +60,9 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// basically exactly the same, it just does the pattern matching
-// inline (nested in match turn[1]) instead of adding methods to Action
+//
 
 #[cfg(test)]
 mod tests {

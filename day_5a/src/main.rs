@@ -68,11 +68,9 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// i don't know but my solution seems batshit insane
-// i think i did some things right here but there is probably
-// a better way to do this
+// i feel.. not great about this solution idk
 
 #[cfg(test)]
 mod tests {

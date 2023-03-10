@@ -14,9 +14,9 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// almost exactly the same just did rev() on the elves.iter() instead of the vec
+// i could have done rev() on the elves.iter() instead of the vec
 
 #[cfg(test)]
 mod test {

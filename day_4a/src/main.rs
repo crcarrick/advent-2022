@@ -32,11 +32,10 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// essentially the same solution but the code is a lot cleaner
-// i did not know about .split_once() which would have really helped
-// with some of the insanity i did here to "unpack" the variables i needed
+// i could have used .split_once() here to save myself some of the loony
+// pattern matching i did
 //
 // input.lines().filter_map(|l| {
 //     let (l, r) = l.split_once(",").unwrap();

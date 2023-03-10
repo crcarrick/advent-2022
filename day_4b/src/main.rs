@@ -32,11 +32,10 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// idk i couldn't find one but i didn't look that hard and i imagine it's close to
-// the original implementation, which didn't include this wacky TupleMap trait i
-// decided to mess around and create.  i just parsed them all into u8 manually in original
+// i decided to implement this TupleMap thing for fun
+// you wouldn't do that otherwise
 
 #[cfg(test)]
 mod tests {

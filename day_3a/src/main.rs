@@ -15,10 +15,10 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// solution was pretty similar except they did not use a string of abcdefg...etc
-// and instead did some byte math (b'b' - b'a' gives you it's position)
+// i could have done some byte math (b'b' - b'a' gives you it's position)
+// instead of creating the "abcdef...ABCDEF..." lookup string
 
 #[cfg(test)]
 mod tests {

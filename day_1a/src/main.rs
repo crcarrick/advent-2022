@@ -23,10 +23,10 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
 // let elves = input.split("\n\n");
-// let most = elves
+// return elves
 //     .map(|elf| {
 //         elf.lines()
 //             .map(|line| line.parse::<u32>().unwrap())
@@ -34,8 +34,6 @@ fn main() {
 //     })
 //     .max()
 //     .unwrap();
-
-// return most;
 
 #[cfg(test)]
 mod test {

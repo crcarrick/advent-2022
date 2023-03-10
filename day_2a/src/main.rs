@@ -49,9 +49,9 @@ fn main() {
     println!("{}", solution(include_str!("../input.txt")))
 }
 
-// github solution
+// notes
 //
-// overall a similar solution but they used some rust features i wasn't aware of
+// i could have used some rust features i wasn't aware of
 //
 // impl FromStr on Action {
 //     type Err = String
