@@ -1,5 +1,10 @@
-import fs from "fs";
 import path from "path";
+
+import { initUtils } from "aoc-utils";
+import fs from "fs-extra";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 function getInputFile(data) {
   if (data.part === "a") return;
@@ -24,6 +29,26 @@ function getTestInput(data) {
 }
 
 export default function (plop) {
+  plop.setActionType("fetchInput", (data) => {
+    return new Promise((resolve, reject) => {
+      const { input } = initUtils({
+        year: "2022",
+        token: process.env.AOC_TOKEN,
+      });
+
+      input(data.day)
+        .then((input) => {
+          fs.outputFileSync(
+            path.join(`day_${data.day}${data.part}`, "input.txt"),
+            input
+          );
+
+          resolve();
+        })
+        .catch(reject);
+    });
+  });
+
   plop.setGenerator("solution", {
     description: "Scaffold a solution to Advent of Code 2022 problem",
     prompts: [
@@ -55,11 +80,15 @@ export default function (plop) {
           path: path.join(dir, "Cargo.toml"),
           templateFile: path.join("templates", "Cargo.toml.hbs"),
         },
-        {
-          type: "add",
-          path: path.join(dir, "input.txt"),
-          templateFile: inputFile,
-        },
+        data.part === "a"
+          ? {
+              type: "fetchInput",
+            }
+          : {
+              type: "add",
+              path: path.join(dir, "input.txt"),
+              templateFile: inputFile,
+            },
         {
           type: "add",
           path: path.join(dir, "src", "main.rs"),

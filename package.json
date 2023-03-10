@@ -1,10 +1,16 @@
 {
   "name": "advent-2022",
   "packageManager": "yarn@3.3.1",
+  "type": "module",
   "scripts": {
     "generate": "plop --plopfile=gen/plopfile.mjs"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.1.0",
     "plop": "^3.1.2"
+  },
+  "dependencies": {
+    "aoc-utils": "^1.0.4"
   }
 }
