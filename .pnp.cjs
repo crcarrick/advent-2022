@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["aoc-utils", "npm:1.0.4"],\
             ["dotenv", "npm:16.0.3"],\
             ["fs-extra", "npm:11.1.0"],\
+            ["inquirer", "npm:9.1.4"],\
             ["plop", "npm:3.1.2"]\
           ],\
           "linkType": "SOFT"\
@@ -125,6 +126,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["aoc-utils", "npm:1.0.4"],\
             ["dotenv", "npm:16.0.3"],\
             ["fs-extra", "npm:11.1.0"],\
+            ["inquirer", "npm:9.1.4"],\
             ["plop", "npm:3.1.2"]\
           ],\
           "linkType": "SOFT"\
@@ -147,6 +149,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["ansi-escapes", "npm:4.3.2"],\
             ["type-fest", "npm:0.21.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:6.0.0", {\
+          "packageLocation": "./.yarn/cache/ansi-escapes-npm-6.0.0-eab622440e-1ddc0b27b1.zip/node_modules/ansi-escapes/",\
+          "packageDependencies": [\
+            ["ansi-escapes", "npm:6.0.0"],\
+            ["type-fest", "npm:3.6.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -173,6 +183,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["ansi-styles", "npm:4.3.0"],\
             ["color-convert", "npm:2.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:6.2.1", {\
+          "packageLocation": "./.yarn/cache/ansi-styles-npm-6.2.1-d43647018c-ef940f2f0c.zip/node_modules/ansi-styles/",\
+          "packageDependencies": [\
+            ["ansi-styles", "npm:6.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -409,6 +426,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cli-width", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/cli-width-npm-4.0.0-739b2261c9-1ec1231121.zip/node_modules/cli-width/",\
+          "packageDependencies": [\
+            ["cli-width", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["clone", [\
@@ -526,11 +550,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["eastasianwidth", [\
+        ["npm:0.2.0", {\
+          "packageLocation": "./.yarn/cache/eastasianwidth-npm-0.2.0-c37eb16bd1-7d00d7cd8e.zip/node_modules/eastasianwidth/",\
+          "packageDependencies": [\
+            ["eastasianwidth", "npm:0.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["emoji-regex", [\
         ["npm:8.0.0", {\
           "packageLocation": "./.yarn/cache/emoji-regex-npm-8.0.0-213764015c-d4c5c39d5a.zip/node_modules/emoji-regex/",\
           "packageDependencies": [\
             ["emoji-regex", "npm:8.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.2.2", {\
+          "packageLocation": "./.yarn/cache/emoji-regex-npm-9.2.2-e6fac8d058-8487182da7.zip/node_modules/emoji-regex/",\
+          "packageDependencies": [\
+            ["emoji-regex", "npm:9.2.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -540,6 +580,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/escape-string-regexp-npm-1.0.5-3284de402f-6092fda75c.zip/node_modules/escape-string-regexp/",\
           "packageDependencies": [\
             ["escape-string-regexp", "npm:1.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/escape-string-regexp-npm-5.0.0-a663e825ce-20daabe197.zip/node_modules/escape-string-regexp/",\
+          "packageDependencies": [\
+            ["escape-string-regexp", "npm:5.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -605,6 +652,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["figures", "npm:3.2.0"],\
             ["escape-string-regexp", "npm:1.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/figures-npm-5.0.0-cd5f512f9c-e6e8b6d1df.zip/node_modules/figures/",\
+          "packageDependencies": [\
+            ["figures", "npm:5.0.0"],\
+            ["escape-string-regexp", "npm:5.0.0"],\
+            ["is-unicode-supported", "npm:1.3.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -931,6 +987,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-ansi", "npm:6.0.1"],\
             ["through", "npm:2.3.8"],\
             ["wrap-ansi", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.1.4", {\
+          "packageLocation": "./.yarn/cache/inquirer-npm-9.1.4-70d8277c43-b9acb56dfc.zip/node_modules/inquirer/",\
+          "packageDependencies": [\
+            ["inquirer", "npm:9.1.4"],\
+            ["ansi-escapes", "npm:6.0.0"],\
+            ["chalk", "npm:5.2.0"],\
+            ["cli-cursor", "npm:4.0.0"],\
+            ["cli-width", "npm:4.0.0"],\
+            ["external-editor", "npm:3.1.0"],\
+            ["figures", "npm:5.0.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["mute-stream", "npm:0.0.8"],\
+            ["ora", "npm:6.1.2"],\
+            ["run-async", "npm:2.4.1"],\
+            ["rxjs", "npm:7.8.0"],\
+            ["string-width", "npm:5.1.2"],\
+            ["strip-ansi", "npm:7.0.1"],\
+            ["through", "npm:2.3.8"],\
+            ["wrap-ansi", "npm:8.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1779,6 +1857,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-ansi", "npm:6.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:5.1.2", {\
+          "packageLocation": "./.yarn/cache/string-width-npm-5.1.2-bf60531341-7369deaa29.zip/node_modules/string-width/",\
+          "packageDependencies": [\
+            ["string-width", "npm:5.1.2"],\
+            ["eastasianwidth", "npm:0.2.0"],\
+            ["emoji-regex", "npm:9.2.2"],\
+            ["strip-ansi", "npm:7.0.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["string_decoder", [\
@@ -1890,6 +1978,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.21.3-5ff2a9c6fd-e6b32a3b38.zip/node_modules/type-fest/",\
           "packageDependencies": [\
             ["type-fest", "npm:0.21.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.6.1", {\
+          "packageLocation": "./.yarn/cache/type-fest-npm-3.6.1-d4ccf8e466-f7e39bf6b7.zip/node_modules/type-fest/",\
+          "packageDependencies": [\
+            ["type-fest", "npm:3.6.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2016,6 +2111,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ansi-styles", "npm:4.3.0"],\
             ["string-width", "npm:4.2.3"],\
             ["strip-ansi", "npm:6.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:8.1.0", {\
+          "packageLocation": "./.yarn/cache/wrap-ansi-npm-8.1.0-26a4e6ae28-371733296d.zip/node_modules/wrap-ansi/",\
+          "packageDependencies": [\
+            ["wrap-ansi", "npm:8.1.0"],\
+            ["ansi-styles", "npm:6.2.1"],\
+            ["string-width", "npm:5.1.2"],\
+            ["strip-ansi", "npm:7.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -34,8 +34,6 @@ fn solution(input: &str) -> String {
         .map(|stack| stack.into_iter().filter(|x| x != " ").collect::<Vec<_>>())
         .collect::<Vec<_>>();
 
-    println!("{:?}", stacks);
-
     let instructions = instructions
         .lines()
         .map(|line| {

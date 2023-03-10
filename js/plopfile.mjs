@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 
 import { initUtils } from "aoc-utils";
 import fs from "fs-extra";
